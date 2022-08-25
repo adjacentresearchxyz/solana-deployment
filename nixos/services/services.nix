@@ -218,21 +218,21 @@
   };
   
   # additional service files
-  #systemd.services.foo = {
-  #  enable = true;
-  #  description = "<description>";
-  #  unitConfig = {
-  #    Type = "simple";
-  #    After = "network.target";
-  #    StartLimitIntervalSec = 0;
-  #  };
-  #  serviceConfig = {
-  #    ExecStart = "<absolute path to binary>";
-  #    Restart = "always";
-  #    RestartSec = 1;
-  #  };
-  #  wantedBy = [ "multi-user.target" ];
-  #};
+  systemd.services.solana_exporter = {
+   enable = true;
+   description = "Solana Prometheus Exporter";
+   unitConfig = {
+     Type = "simple";
+     After = "network.target";
+     StartLimitIntervalSec = 0;
+   };
+   serviceConfig = {
+     ExecStart = "/etc/nixos/prometheus_acccount_exporter/target/release/examples/solana";
+     Restart = "always";
+     RestartSec = 1;
+   };
+   wantedBy = [ "multi-user.target" ];
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true; 
