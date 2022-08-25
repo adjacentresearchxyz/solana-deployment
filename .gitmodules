@@ -1,3 +1,6 @@
 [submodule "nixos/services/prometheus_acccount_exporter"]
 	path = nixos/services/prometheus_acccount_exporter
 	url = https://github.com/adjacentresearchxyz/prometheus_acccount_exporter.git
+[submodule "nixos/services/solana"]
+	path = nixos/services/solana
+	url = https://github.com/solana-labs/solana.git
