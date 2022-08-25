@@ -58,3 +58,15 @@ If you want to develop on the host remote `vscode-server` has been added but you
 systemctl --user enable auto-fix-vscode-server.service
 systemctl --user start auto-fix-vscode-server.service
 ```
+
+### Solana 
+In order to have the address tracking for solana as a dashboard you will need to 
+```
+# edit `/etc/nixos/services/prometheus_account_exporter/projects/solana/solana.rs` and add your address in the address vector
+
+# build the binary 
+nix-shell -p cargo libiconv openssl pkgconfig --run "cargo build --release --example solana --feature=hyper_server"
+```
+
+following a standard `nixos-rebuld switch --flake /etc/nixos#nixos` you should be good to go
+

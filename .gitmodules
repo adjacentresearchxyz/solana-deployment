@@ -1,0 +1,3 @@
+[submodule "nixos/services/prometheus_acccount_exporter"]
+	path = nixos/services/prometheus_acccount_exporter
+	url = https://github.com/adjacentresearchxyz/prometheus_acccount_exporter.git
