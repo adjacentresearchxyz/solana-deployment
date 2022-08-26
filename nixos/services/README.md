@@ -1,8 +1,12 @@
 # Building Binaries 
 ### Buidling Solana
 ```
+# enter the solana shell
+nix-shell solana-shell.nix
+
+rustup default stable 
 cd solana
-nix-shell -p cargo libiconv openssl pkgconfig protobuf3_11 udev clang --run "cargo build --release"
+cargo build --release
 ```
 ### Building `prometheus_account_exporter`
 ```
