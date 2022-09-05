@@ -1,6 +1,6 @@
 # Deployment 
 
-Deployment of `NixOS` via `terraform` with monitoring and log collection
+Deployment of `NixOS` via `terraform` with monitoring and log collection along with some packages for the [solana](https://solana.com) cli and wallet tracking
 
 ## Authenticating 
 - Login to `aws-cli` 
